@@ -1,0 +1,29 @@
+// definir los pines que usara cada led
+int verde = 8;
+int amarillo = 9;
+int rojo = 10;
+
+void setup() {
+  // hacer que los pines sean de salida
+  pinMode(verde, OUTPUT);
+  pinMode(amarillo, OUTPUT);
+  pinMode(rojo, OUTPUT);
+}
+
+void loop() {
+  //el proceso de apagado y encendido para el efento de un semaforo
+  digitalWrite(verde, LOW); //confirmar que el verde este apagado
+  digitalWrite(amarillo, LOW);  //confirmar que el amarillo este apagado
+  digitalWrite(rojo, HIGH); //encender el led rojo
+  delay(10000); //tiempo que el led rojo estara encendido
+  digitalWrite(rojo, LOW); // hacer que el rojo parpadee
+  delay(280);
+  digitalWrite(rojo, HIGH);
+  delay(280);
+  digitalWrite(rojo, LOW); //aca el rojo ya se apaga
+  digitalWrite(verde, HIGH); // el verde enciende
+  delay(6000); // tiempo que el led verde esta encendido
+  digitalWrite(verde, LOW); // el led verde se apaga
+  digitalWrite(amarillo, HIGH); // el led amarillo enciende
+  delay(1400); // el tiempo que dura el led amarillo y se repite todo
+}
