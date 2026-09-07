@@ -1,2 +1,2 @@
 # arduino-semaforo
-my first project in github
+un semaforo :p
